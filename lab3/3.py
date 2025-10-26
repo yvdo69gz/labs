@@ -2,13 +2,13 @@ def read_file(file_name, read_type):
     try:
         with open(file_name, 'r') as file:
             if read_type == 1:
-                    content = file.read()
-                    return content
+                content = file.read()
+                return content
             elif read_type == 2:
-                    lines = ''
-                    for line in file:
-                        lines += line
-                    return lines
+                lines = ''
+                for line in file:
+                    lines += line
+                return lines
             else:
                 return 'Введен неверный тип чтения'
     except FileNotFoundError:
